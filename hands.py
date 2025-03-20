@@ -1,9 +1,15 @@
+#It uses 1 or both hands depend on reqiurement reponse. With 1 hand 30 different actions can be performed and 60+ with both hands.
+#It has 4 modes 0 for using all commands to perform.
+#1 for ppt mode.
+#2 for media player mode.
+#3 for using youtube video.
+
 import mediapipe as mp
 import cv2
 import pyautogui
 import time
 #import gtts
-#import playsound
+import playsound
 
 a = eval(input("Enter a number of hands: "))
 mode = eval(input(
