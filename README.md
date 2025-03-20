@@ -14,6 +14,7 @@ This project uses **MediaPipe**, **OpenCV**, and **PyAutoGUI** to track hand mov
    - **Media Player Mode**: Controls playback (play, pause, volume).  
    - **YouTube Video Mode**: Interacts with YouTube videos.  
 ✔ **Real-time Processing**: Captures and processes video frames efficiently.
+✔ **4-Axis Control**: Supports movement along **+X, -X, +Y, and -Y** axes.
 
 ---
 
@@ -57,6 +58,7 @@ python hands.py
 2. **The webcam activates and detects hands.**
 3. **Finger gestures are analyzed.**
 4. **Keyboard shortcuts are triggered based on gestures.**
+5. **Supports movement detection in 4 axes: +X, -X, +Y, -Y.**
 
 ---
 
@@ -79,6 +81,7 @@ python hands.py
 🎵 **Media Playback** – Control music/video players without touching the keyboard.  
 📺 **YouTube Control** – Play/pause or change videos using gestures.  
 💻 **Assistive Tech** – Useful for hands-free computer interaction.  
+🎮 **Directional Control** – Move along **+X, -X, +Y, -Y** for potential gaming and robotics applications.
 
 ---
 
@@ -86,6 +89,7 @@ python hands.py
 ✅ Improve accuracy using refined hand landmark logic.  
 ✅ Add voice feedback using **Google Text-to-Speech (gTTS)**.  
 ✅ Support more complex hand gestures for advanced control.  
+✅ Expand functionality for **gaming, robotics, and virtual environments**.
 
 🚀 **This project enables a futuristic, touchless interface using computer vision!** 🚀
 
