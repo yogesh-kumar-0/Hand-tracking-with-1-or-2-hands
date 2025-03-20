@@ -3,6 +3,7 @@
 #1 for ppt mode.
 #2 for media player mode.
 #3 for using youtube video.
+#it includes 4 axis +x,-x,+y,-y
 
 import mediapipe as mp
 import cv2
@@ -18,7 +19,7 @@ mode = eval(input(
 
 def count_fingers(lst):
     cnt = 0
-
+#for 4 fingers in +y axis
     thresh = (lst.landmark[0].y * 100 - lst.landmark[9].y * 100) / 2
 
     if (lst.landmark[5].y * 100 - lst.landmark[8].y * 100) > thresh:
@@ -33,11 +34,11 @@ def count_fingers(lst):
     if (lst.landmark[17].y * 100 - lst.landmark[20].y * 100) > thresh:
         cnt += 4
 
-
+#for thumb in +x,-x, +y,-y axis
     if (lst.landmark[5].x * 100 - lst.landmark[4].x * 100) > 6:
         cnt += 5
 
-    if (lst.landmark[5].y * 100 - lst.landmark[4].x * 100) > 6:
+    if (lst.landmark[5].y * 100 - lst.landmark[4].y * 100) > 6:
         cnt += 16
 
     if (lst.landmark[5].y * (-100) - lst.landmark[4].y * (-100)) > 6:
@@ -46,7 +47,7 @@ def count_fingers(lst):
     if (lst.landmark[5].x * (-100) - lst.landmark[4].x * (-100)) > 6:
         cnt += 38
 
-
+#for fingures in -y axis
     if (lst.landmark[5].y * (-100) - lst.landmark[8].y * (-100)) > thresh:
         cnt += 1
 
@@ -59,7 +60,7 @@ def count_fingers(lst):
     if (lst.landmark[17].y * (-100) - lst.landmark[20].y * (-100)) > thresh:
         cnt += 4
 
-
+#for fingures in -x axis
     if (lst.landmark[5].x * (-100) - lst.landmark[8].x * (-100)) > thresh:
         cnt += 1
 
@@ -72,7 +73,7 @@ def count_fingers(lst):
     if (lst.landmark[17].x * (-100) - lst.landmark[20].x * (-100)) > thresh:
         cnt += 4
 
-
+#for fingures in +x axis
     if (lst.landmark[5].x * 100 - lst.landmark[8].x * 100) > thresh:
         cnt += 1
 
